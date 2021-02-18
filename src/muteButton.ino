@@ -38,11 +38,11 @@ void loop() {
 
 void executeShortKeys() {
   // Activate Team window with Win Key + {Number} //position of Teams in taskbar
-  Keyboard.press(winKey);
-  Keyboard.press('1'); // Position in task bar
-  delay(100);
-  Keyboard.releaseAll();
-  delay(100);
+  //Keyboard.press(winKey);
+  //Keyboard.press('1'); // Position in task bar
+  //delay(100);
+  //Keyboard.releaseAll();
+  //delay(100);
   Keyboard.press(ctrlKey);
   Keyboard.press(shftKey);
   Keyboard.press(';'); //Using ';' instead of 'm' for AZERTY keyboard

@@ -1,9 +1,11 @@
 # Teams mute button
 
 ![Usb Mute Button](img/button.jpg "Usb Mute Button")
-L'idée de ce projet est de créer un bouton **Mute** / **UnMute** pour Microsoft Teams.
+L'idée de ce projet est de créer un bouton **Mute** / **Unmute** pour Microsoft Teams.
 
-Pour faire simple, on va utiliser un Arduino qui va executer le raccourci clavier Teams **CTRL** + **SHIFT** + **M**.
+Pour se faire, on va utiliser un Arduino pro micro.
+
+Celui-ci va executer le raccourci clavier Teams **CTRL** + **SHIFT** + **M**.
 
 
 ## Matériel utilisé
@@ -34,8 +36,20 @@ Afin d'éviter les parasites, il faut réaliser un montage "pull down" à l'aide
 Afin de tracker l'execution de mon programme, j'ai utilisé l'utilitaire [Carnac](https://github.com/bfritscher/carnac/releases/tag/v3-beta) pour afficher les touches pressées.
 Ca m'a permis de comprendre que l'Arduino fonctionne en QUERTY :)
 
-_Note: Avec un clavier AZERTY, il faut executer le raccourci clavier **CTRL** + **SHIFT** + **;**_
+_Note: Avec un clavier AZERTY, il faut utiliser le raccourci clavier **CTRL** + **SHIFT** + **;**_
 
+### Option
+Il est possible d'ajouter le raccourci clavier **WinKey** + **1-9** pour mettre en premier plan la fenêtre Teams avant de Mute/Unmute
+
+Voici le code à ajouter au début de la méthode **executeShortKeys()**
+
+```c
+Keyboard.press(winKey);
+Keyboard.press('1'); // Position in task bar
+delay(100);
+Keyboard.releaseAll();
+delay(100);
+```
 
 ## Montage
 
