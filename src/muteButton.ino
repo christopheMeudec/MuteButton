@@ -37,7 +37,7 @@ void loop() {
 }
 
 void executeShortKeys() {
-  // Activate Team window with Win Key + {Number} //position of Teams in taskbar
+  // Activate Teams window with Win Key + {Number} //position of Teams in taskbar
   //Keyboard.press(winKey);
   //Keyboard.press('1'); // Position in task bar
   //delay(100);
